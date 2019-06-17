@@ -8,7 +8,15 @@
     android:orientation="vertical"
     tools:context=".views.LoginActivity">
 
-
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuideline20" />
 
     <TextView
         android:id="@+id/loginLbl"
@@ -82,6 +90,19 @@
 
     </android.support.design.widget.TextInputLayout>
 
+
+    <TextView
+        android:id="@+id/tvForget"
+        android:layout_width="392dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Forget Password"
+        android:textColor="#E1C9C9"
+        app:layout_constraintEnd_toEndOf="@id/passwordTIL"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/verticalGuideline50"
+        app:layout_constraintTop_toBottomOf="@id/passwordTIL" />
 
     <android.support.constraint.Guideline
         android:id="@+id/verticalGuideline50"
@@ -164,5 +185,26 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
+        <TextView
+            android:id="@+id/no_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Don't have account ? "
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="REGISTER"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
