@@ -52,6 +52,26 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.add_room_ad) {
+            Intent intent = new Intent(this, CreateRoomActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        switch (item.getItemId()) {
+            case R.id.menuLogout:
+
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(this, LoginActivity.class));
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onDestroy() {
